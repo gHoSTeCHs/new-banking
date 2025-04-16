@@ -1,4 +1,4 @@
-import { User } from '../..';
+import { Card, Contact, FavoriteTransfer, Transaction, User } from '../..';
 import images from './images';
 
 export const USERS: User[] = [
@@ -7,5 +7,160 @@ export const USERS: User[] = [
 		name: 'Arafat',
 		email: 'arafat@example.com',
 		avatarUrl: images.user1,
+	},
+];
+
+export const CARDS: Card[] = [
+	{
+		id: '1',
+		userId: '1',
+		type: 'debit',
+		last4: '4321',
+		cardNumber: '**** **** **** 4321',
+		expiry: '05/27',
+		cvv: '***',
+		balance: 2540.75,
+		cardHolder: 'Arafat',
+		isDefault: true,
+		color: 'amber-400',
+	},
+	{
+		id: '2',
+		userId: '1',
+		type: 'credit',
+		last4: '8765',
+		cardNumber: '**** **** **** 8765',
+		expiry: '09/26',
+		cvv: '***',
+		balance: 5000,
+		cardHolder: 'Arafat',
+		isDefault: false,
+		color: 'blue-500',
+	},
+];
+
+export const TRANSACTIONS: Transaction[] = [
+	{
+		id: 'TR1234567',
+		userId: '1',
+		amount: 206.0,
+		type: 'deposit',
+		category: 'Transfer',
+		merchant: 'Deposit',
+		description: 'Transfer received',
+		date: '2023-01-12T14:30:00Z',
+		status: 'completed',
+		cardId: '1',
+		commission: 1,
+	},
+	{
+		id: 'TR7654321',
+		userId: '1',
+		amount: -10.5,
+		type: 'withdrawal',
+		category: 'Restaurant',
+		merchant: 'DoorDash',
+		description: 'Food delivery',
+		date: '2023-01-26T18:45:00Z',
+		status: 'completed',
+		cardId: '1',
+	},
+	{
+		id: 'TR9876543',
+		userId: '1',
+		amount: -14.99,
+		type: 'withdrawal',
+		category: 'Games',
+		merchant: 'PlayStation Plus Essential',
+		description: 'Subscription',
+		date: '2023-01-15T09:30:00Z',
+		status: 'completed',
+		cardId: '1',
+	},
+	{
+		id: 'TR3456789',
+		userId: '1',
+		amount: -9.99,
+		type: 'withdrawal',
+		category: 'Entertainment',
+		merchant: 'UFC Fight Pass',
+		description: 'Subscription',
+		date: '2023-01-10T12:15:00Z',
+		status: 'completed',
+		cardId: '1',
+	},
+];
+
+export const CONTACTS: Contact[] = [
+	{
+		id: '1',
+		userId: '1',
+		name: 'Jacob Razinskiy',
+		email: 'jacob@example.com',
+		avatarUrl: images.user2,
+		isFavorite: true,
+		lastTransaction: '2023-01-05T14:30:00Z',
+	},
+	{
+		id: '2',
+		userId: '1',
+		name: 'Olivia Jones',
+		email: 'olivia@example.com',
+		avatarUrl: images.user3,
+		isFavorite: true,
+		lastTransaction: '2023-01-10T11:15:00Z',
+	},
+	{
+		id: '3',
+		userId: '1',
+		name: 'Hasan Esrafidi',
+		email: 'hasan@example.com',
+		avatarUrl: images.user4,
+		isFavorite: true,
+		lastTransaction: '2023-01-15T09:30:00Z',
+	},
+	{
+		id: '4',
+		userId: '1',
+		name: 'Maria Hernandez',
+		email: 'maria@example.com',
+		avatarUrl: images.user5,
+		isFavorite: false,
+		lastTransaction: '2022-12-28T16:45:00Z',
+	},
+];
+
+export const FAVORITE_TRANSFERS: FavoriteTransfer[] = [
+	{
+		id: '1',
+		userId: '1',
+		recipientId: '1',
+		recipientName: 'Mortgage',
+		lastAmount: 1200,
+		lastDate: '2023-01-15T09:30:00Z',
+	},
+	{
+		id: '2',
+		userId: '1',
+		recipientId: '2',
+		recipientName: 'Donation',
+		lastAmount: 50,
+		lastDate: '2023-01-10T11:15:00Z',
+	},
+	{
+		id: '3',
+		userId: '1',
+		recipientId: '3',
+		recipientName: 'AT&T',
+		lastAmount: 80,
+		lastDate: '2023-01-05T14:30:00Z',
+	},
+	{
+		id: '4',
+		userId: '1',
+		recipientId: '4',
+		recipientName: 'Steam',
+		lastAmount: 60,
+		lastDate: '2022-12-28T16:45:00Z',
 	},
 ];
