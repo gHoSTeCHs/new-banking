@@ -7,6 +7,7 @@ import user6 from '../assets/images/pexels-photo-4067766.jpg';
 import user7 from '../assets/images/pexels-photo-5378700.jpg';
 import user8 from '../assets/images/pexels-photo-6801642.jpg';
 import user9 from '../assets/images/pexels-photo-6626903.jpg';
+import cardChip from '../assets/images/card-chip.png';
 
 export default {
 	user1,
@@ -18,4 +19,5 @@ export default {
 	user7,
 	user8,
 	user9,
+	cardChip,
 };
